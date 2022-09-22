@@ -1,13 +1,21 @@
 
 
 import './App.css'
+import { About } from './components/About'
+import { Home } from './components/Home'
+import {Route,Routes} from "react-router-dom"
+import { Navbar } from './components/Navbar'
 
 function App() {
   
 
   return (
     <div className="App">
-      <h1>Welcome to React Routing</h1>
+      <Navbar/>
+     <Routes>
+      <Route path='/' element={<Home/>}></Route>
+      <Route path='/about' element={<About/>}></Route>
+     </Routes>
     </div>
   )
 }
